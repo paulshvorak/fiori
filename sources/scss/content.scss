@@ -35,8 +35,6 @@
 }
 
 .content {
-	@include flexbox();
-	@include justify-content(center);
 	&__item {
 		position: relative;
 		top: -70px;
