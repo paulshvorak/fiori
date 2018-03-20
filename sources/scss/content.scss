@@ -1,0 +1,83 @@
+.main {
+	&-banner {
+		background: url("../images/about-bg.jpg") no-repeat;
+		background-size: cover;
+		padding: 172px 0 146px;
+		&__logo {
+			display: block;
+			margin: 0 auto 76px;
+			max-width: 100%;
+		}
+		&__title {
+			margin: 0 0 324px;
+			text-align: center;
+			color: $white;
+			line-height: 1;
+			.title {
+				font-size: 90px;
+				letter-spacing: 1.6px;
+			}
+			.subtitle {
+				margin: 20px 0 0;
+				font-size: 60px;
+				letter-spacing: .9px;
+			}
+		}
+		&__nav {
+			@include flexbox();
+			@include justify-content(space-between);
+			&-item {
+				font-size: 24px;
+				line-height: 1;
+			}
+		}
+	}
+}
+
+.content {
+	@include flexbox();
+	@include justify-content(center);
+	&__item {
+		position: relative;
+		top: -70px;
+		padding: 62px 50px 48px;
+		max-width: 800px;
+		box-shadow: 0 2px 18px rgba(0, 0, 0, 0.15);
+		background-color: $white;
+		&-title {
+			position: relative;
+			margin: 0 0 36px;
+			padding: 0 0 16px;
+			font-size: 34px;
+			line-height: 1;
+			text-align: center;
+			text-transform: uppercase;
+			color: $primary;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin-left: -50px;
+				width: 100px;
+				height: 2px;
+				background-color: $primary;
+			}
+		}
+		&-txt {
+			font-size: 18px;
+			line-height: 1.4;
+			text-align: center;
+			color: $primary--dark;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			height: 9px;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: $primary;
+		}
+	}
+}
