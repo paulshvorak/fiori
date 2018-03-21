@@ -1,3 +1,5 @@
+// MAIN SECTION
+
 .main {
 	&-banner {
 		background: url("../images/about-bg.jpg") no-repeat;
@@ -34,6 +36,34 @@
 				max-width: 1300px;
 				margin: 0 auto;
 			}
+		}
+	}
+}
+
+// DECORATION SERVICES
+
+.decorations-services {
+	margin: 0 0 127px;
+}
+
+// CONTACTS SERVICES
+
+.contacts {
+	text-align: center;
+	color: $primary--dark;
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+	&__socials {
+		@include flexbox();
+		@include justify-content(center);
+		
+		margin: 20px 0 0;
+		
+		&-item {
+			margin: 0 15px;
 		}
 	}
 }
