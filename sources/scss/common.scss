@@ -152,12 +152,12 @@ h6 {
   text-overflow: ellipsis;
 }
 
-*::selection {
-
-  //color: $orange;
-  background: $black;
-
-}
+//*::selection {
+//
+//  //color: $orange;
+//  background: $black;
+//
+//}
 
 // Container
 
@@ -178,7 +178,7 @@ h6 {
 		
 	}
 	
-	@media (max-width: $screen-lg) {
+	@media (max-width: $screen-md-max) {
 		
 		max-width: -webkit-calc(#{$screen-md} - 48px);
 		max-width: calc(#{$screen-md} - 48px);
@@ -187,7 +187,7 @@ h6 {
 		
 	}
 	
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-sm-max) {
 
     max-width: -webkit-calc(#{$screen-sm} - 32px);
 	  max-width: calc(#{$screen-sm} - 32px);
@@ -196,7 +196,7 @@ h6 {
 	  
   }
 	
-	@media (max-width: $screen-sm) {
+	@media (max-width: $screen-xs-max) {
 		
 		max-width: -webkit-calc(#{$screen-sm} - 24px);
 		max-width: calc(#{$screen-sm} - 24px);
@@ -207,7 +207,46 @@ h6 {
 
 }
 
+// Button
 
+.btn {
+	display: inline-block;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	text-decoration: none;
+	border: 1px solid $primary;
+	background-color: transparent;
+	color: $primary;
+	padding: 16px 32px;
+	font-size: 16px;
+	line-height: 1;
+	border-radius: 4px;
+	transition: .15s ease;
+	&--rounded {
+		border-radius: 40px;
+	}
+	&--lg {
+		max-width: 100%;
+		width: 400px;
+		padding: 32px;
+		@media screen and (max-width: $screen-xs-max) {
+			width: 280px;
+			padding: 16px;
+		}
+	}
+	&:hover {
+		background-color: $primary;
+		color: $white;
+	}
+	&:active {
+		background-color: darken($primary, 10%);
+	}
+}
 
 // Common title 
 
@@ -403,9 +442,48 @@ h6 {
 				}
 			}
 		}
+		&--photo {
+			&:after {
+				z-index: 1;
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(142,201,207, 0);
+				transition: .15s ease;
+			}
+			&:before {
+				display: none;
+				z-index: 2;
+				content: 'icon';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			&:hover {
+				&:after {
+					background-color: rgba(142,201,207, .8);
+				}
+				&:before {
+					display: block;
+				}
+			}
+		}
+		&--borded {
+			width: calc(100% / 3 - 10px);
+			margin: 5px;
+			box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
+			border: 2px solid $white;
+		}
 		@media screen and (max-width: $screen-sm-max) {
 			width: calc(100% / 2);
 			padding-bottom: 28%;
+			&--borded {
+				width: calc(100% / 2 - 10px);
+			}
 		}
 		@media screen and (max-width: $screen-xs-max) {
 			width: 100%;

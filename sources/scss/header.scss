@@ -4,7 +4,6 @@
 	left: 0;
 	right: 0;
 	padding: 60px 0;
-		
 	&__inner {
 		@include flexbox();
 		@include justify-content(space-between);
@@ -45,6 +44,34 @@
 			&:last-child {
 				padding-right: 0;
 			}
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		&__nav {
+			&-item {
+				padding: 0 24px;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		padding: 24px 0;
+		&__inner {
+			@include flex-direction(column);
+		}
+		&__lang {
+			margin-bottom: 24px;
+		}
+		&__nav {
+			@include justify-content(space-around);
+			@include align-self(stretch);
+			&-item {
+				padding: 0;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-2xs-max) {
+		&__nav {
+			@include justify-content(space-between);
 		}
 	}
 }
