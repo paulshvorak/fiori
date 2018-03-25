@@ -4,7 +4,6 @@
 	left: 0;
 	right: 0;
 	padding: 60px 0;
-		
 	&__inner {
 		@include flexbox();
 		@include justify-content(space-between);
@@ -12,6 +11,29 @@
 	}
 	&__lang {
 		position: relative;
+		padding-right: 20px;
+		cursor: pointer;
+		&-current {
+			padding: 4px;
+			font-size: 20px;
+			text-transform: uppercase;
+			color: $white;		
+		}
+		&-list {
+			position: absolute;
+			top: 100%;
+			display: none;
+			&-item {
+				padding: 4px;
+				font-size: 20px;
+				text-transform: uppercase;
+				color: $white;
+				transition: .15s ease;
+				&:hover {
+					background-color: rgba(0,0,0, .3);
+				}
+			}
+		}
 		&-select {
 			-webkit-appearance: none;
 			-moz-appearance: none;
@@ -25,7 +47,7 @@
 		&:after {
 			content: '';
 			position: absolute;
-			right: -16px;
+			right: 0;
 			top: 50%;
 			margin-top: -3px;
 			width: 0;
@@ -33,6 +55,9 @@
 			border-style: solid;
 			border-width: 6px 5px 0 5px;
 			border-color: #ffffff transparent transparent transparent;
+		}
+		&:hover > .header__lang-list {
+			display: block;
 		}
 	}
 	&__nav {
@@ -45,6 +70,34 @@
 			&:last-child {
 				padding-right: 0;
 			}
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		&__nav {
+			&-item {
+				padding: 0 24px;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		padding: 24px 0;
+		&__inner {
+			@include flex-direction(column-reverse);
+		}
+		&__lang {
+			margin: 24px 0 0;
+		}
+		&__nav {
+			@include justify-content(space-around);
+			@include align-self(stretch);
+			&-item {
+				padding: 0;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-2xs-max) {
+		&__nav {
+			@include justify-content(space-between);
 		}
 	}
 }

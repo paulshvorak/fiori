@@ -1,3 +1,5 @@
+// MAIN SECTION
+
 .main {
 	&-banner {
 		background: url("../images/about-bg.jpg") no-repeat;
@@ -35,5 +37,131 @@
 				margin: 0 auto;
 			}
 		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		&-banner {
+			&__title {
+				margin: 0 0 220px;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		&-banner {
+			padding: 140px 0 120px;
+			&__logo {
+				margin: 0 auto 44px;
+				max-width: 200px;
+			}
+			&__title {
+				margin: 0 0 48px;
+				.title {
+					font-size: 50px;
+				}
+				.subtitle {
+					font-size: 32px;
+				}
+			}
+			&__nav {
+				@include justify-content(center);
+				@include flex-wrap(wrap);
+				&-item {
+					padding: 16px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+
+// DECORATION SERVICES
+
+.decorations-services {
+	margin: 0 0 127px;
+}
+
+// CONTACTS SERVICES
+
+.contacts {
+	text-align: center;
+	color: $primary--dark;
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+	}
+	&__socials {
+		@include flexbox();
+		@include justify-content(center);
+		
+		margin: 20px 0 0;
+		
+		&-item {
+			margin: 0 15px;
+		}
+	}
+}
+
+// GALLERY PAGE
+
+.page-gallery {
+	.gallery-main {
+		position: relative;
+		top: -70px;
+		&__item {
+			&:nth-child(1) {
+				width: calc(100% / 2 - 10px);
+			}
+			&:nth-child(2) {
+				width: calc(100% / 4 - 10px);
+			}
+			&:nth-child(3) {
+				width: calc(100% / 4 - 10px);
+			}
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		.gallery-main {
+			&__item {
+				&:nth-child(2), &:nth-child(3) {
+					width: calc(100% / 2 - 10px);
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		.gallery-main {
+			&__item {
+				&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.bouqets {
+	padding: 0 0 80px;
+	&__list {
+		&-item {
+			width: calc(100% / 3 - 20px);
+			margin: 10px;
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		&__list {
+			&-item {
+				width: calc(100% / 2 - 20px);
+			}
+		}	
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		&__list {
+			&-item {
+				width: 100%;
+				&:not(:last-child) {
+					margin: 0 0 10px;
+				}
+			}
+		}	
 	}
 }
