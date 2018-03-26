@@ -14,18 +14,18 @@
 			max-width: 100%;
 		}
 		&__title {
-			margin: 0 0 324px;
+			margin: 0 0 300px;
 			text-align: center;
 			color: $white;
 			line-height: 1;
 			.title {
 				font-size: 90px;
-				letter-spacing: 1.6px;
+				letter-spacing: -3px;
 			}
 			.subtitle {
 				margin: 20px 0 0;
 				font-size: 60px;
-				letter-spacing: .9px;
+				letter-spacing: -2px;
 			}
 		}
 		&__slider {
@@ -114,12 +114,12 @@
 .page-main {
 	.main-banner {
 		background-image: url("../images/index-bg.jpg");
-		padding: 150px 0 40px;
+		padding: 150px 0 60px;
 		.container {
 			@include flexbox();
 			@include justify-content(space-between);
 			@include flex-direction(column);
-			min-height: calc(100vh - 190px);
+			min-height: calc(100vh - 210px);
 		}
 		.tns-outer {
 			position: absolute;
@@ -296,6 +296,25 @@
 .page-gallery {
 	.main-banner {
 		background-image: url("../images/gallery-bg.jpg");
+		&__title {
+			margin: 0 0 240px;
+		}
+		.breadcrumbs {
+			margin: 50px 0 0;
+			font-size: 26px;
+			line-height: 1;
+			color: $primary;
+			&-item {
+				color: $white;
+				&--blue {
+					color: $primary;
+					text-decoration: underline;
+					&:hover {
+						color: darken($primary, 10%);
+					}
+				}
+			}
+		}
 	}
 	.gallery-main {
 		position: relative;
@@ -322,6 +341,14 @@
 		}
 	}
 	@media screen and (max-width: $screen-xs-max) {
+		.main-banner {
+			&__title {
+				margin: 0 0 44px;
+			}
+			.breadcrumbs {
+				font-size: 18px;
+			}
+		}
 		.gallery-main {
 			&__item {
 				&:nth-child(1), &:nth-child(2), &:nth-child(3) {
