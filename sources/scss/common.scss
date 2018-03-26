@@ -173,6 +173,7 @@
 	padding: 0 0 16px;
 	font-size: 34px;
 	line-height: 1;
+	letter-spacing: -2px;
 	text-align: center;
 	text-transform: uppercase;
 	color: $primary;
@@ -268,6 +269,7 @@
 		overflow: hidden;
 		img {
 			display: block;
+			width: 100%;
 			max-width: 100%;
 		}
 		&--image {

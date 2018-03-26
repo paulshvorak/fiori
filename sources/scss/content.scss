@@ -361,29 +361,47 @@
 
 // BOUQETS PAGE
 
-.bouqets {
-	padding: 0 0 80px;
-	&__list {
-		&-item {
-			width: calc(100% / 3 - 20px);
-			margin: 10px;
-		}
-	}
-	@media screen and (max-width: $screen-sm-max) {
+.page-flowers {
+	.bouqets {
+		padding: 0 0 80px;
 		&__list {
 			&-item {
-				width: calc(100% / 2 - 20px);
+				width: calc(100% / 3 - 20px);
+				margin: 10px;
 			}
-		}	
-	}
-	@media screen and (max-width: $screen-xs-max) {
-		&__list {
-			&-item {
-				width: 100%;
-				&:not(:last-child) {
-					margin: 0 0 10px;
+		}
+		@media screen and (max-width: $screen-sm-max) {
+			&__list {
+				&-item {
+					width: calc(100% / 2 - 20px);
 				}
 			}
-		}	
+		}
+		@media screen and (max-width: $screen-xs-max) {
+			&__list {
+				&-item {
+					width: 100%;
+					&:not(:last-child) {
+						margin: 0 0 10px;
+					}
+				}
+			}
+		}
+	}
+	.contacts {
+		&__site {
+			margin: 0 0 26px;
+			a {
+				font-size: 20px;
+				line-height: 1;
+				color: $primary;
+				text-transform: uppercase;
+				text-decoration: underline;
+				&:hover {
+					color: darken($primary, 10%);
+				}
+			}
+		}
 	}
 }
+
