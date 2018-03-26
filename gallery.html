@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>About</title>
 	<link rel="stylesheet" href="app/css/bundle.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
 </head>
 <body>
 
@@ -62,18 +63,25 @@
 			</div>
 		</section>
 
-		<div class="gallery gallery-main">
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
-			<div class="gallery__item gallery__item--photo gallery__item--borded"></div>
+		<div class="animated-thumbnails gallery gallery-main">
+			<a href="app/images/test.jpg" class="gallery__item gallery__item--photo gallery__item--image gallery__item--borded">
+				<img src="app/images/test.jpg" alt="gallery-item">
+			</a>
+			<a href="app/images/test.jpg" class="gallery__item gallery__item--photo gallery__item--image gallery__item--borded">
+				<img src="app/images/test.jpg" alt="gallery-item">
+			</a>
+			<a href="app/images/test.jpg" class="gallery__item gallery__item--photo gallery__item--image gallery__item--borded">
+				<img src="app/images/test.jpg" alt="gallery-item">
+			</a>
+			<a href="app/images/test.jpg" class="gallery__item gallery__item--photo gallery__item--image gallery__item--borded">
+				<img src="app/images/test.jpg" alt="gallery-item">
+			</a>
+			<a href="app/images/test.jpg" class="gallery__item gallery__item--photo gallery__item--image gallery__item--borded">
+				<img src="app/images/test.jpg" alt="gallery-item">
+			</a>
+			<a href="app/images/test.jpg" class="gallery__item gallery__item--photo gallery__item--image gallery__item--borded">
+				<img src="app/images/test.jpg" alt="gallery-item">
+			</a>
 		</div>
 
 		<section class="section section-galleries">
@@ -115,6 +123,21 @@
 	</footer>
 
 </div>
+
+<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+<script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+
+<script>
+	lightGallery(document.querySelector('.animated-thumbnails'), {
+		thumbnail:true
+	});
+</script>
 
 </body>
 

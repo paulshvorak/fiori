@@ -4,6 +4,7 @@
 	left: 0;
 	right: 0;
 	padding: 60px 0;
+	z-index: 2;
 	&__inner {
 		@include flexbox();
 		@include justify-content(space-between);
@@ -92,6 +93,24 @@
 			@include align-self(stretch);
 			&-item {
 				padding: 0;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) and (orientation: landscape) {
+		&__inner {
+			@include flex-direction(row);
+		}
+		&__lang {
+			margin: 0;
+		}
+		&__nav {
+			&-item {
+				a {
+					vertical-align: -webkit-baseline-middle;
+				}
+				&:not(:last-child) {
+					margin-right: 20px;
+				}
 			}
 		}
 	}

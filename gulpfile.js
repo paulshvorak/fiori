@@ -18,7 +18,7 @@ gulp.task('sass', function(){
     gulp.src('sources/scss/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(concatCss('bundle.css'))
-        .pipe(minify({keepBreaks: true}))
+        .pipe(minify({keepBreaks: false}))
         .pipe(rename({
             suffix: '.min'
         }))
