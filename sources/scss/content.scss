@@ -3,8 +3,9 @@
 .main {
 	&-banner {
 		position: relative;
-		background: url("../images/index-bg.jpg") no-repeat;
+		background-image: url("../images/default-bg.jpg");
 		background-size: cover;
+		background-repeat: no-repeat;
 		background-position: center center;
 		padding: 172px 0 146px;
 		&__logo {
@@ -100,16 +101,13 @@
 
 .page-main {
 	.main-banner {
+		background-image: url("../images/index-bg.jpg");
 		padding: 150px 0 40px;
 		.container {
 			@include flexbox();
 			@include justify-content(space-between);
 			@include flex-direction(column);
 			min-height: calc(100vh - 190px);
-		}
-		&__logo {
-			@include align-self(center);
-			margin: 0;
 		}
 		.tns-outer {
 			position: absolute;
@@ -140,6 +138,10 @@
 					background-position: 0 -249px;
 				}
 			}
+		}
+		&__logo {
+			@include align-self(center);
+			margin: 0;
 		}
 		@media screen and (max-width: $screen-xs-max) {
 			padding: 126px 0 40px;
@@ -201,10 +203,23 @@
 	}
 }
 
+// WEDDINGS PAGE
+
+.page-weddings {
+	.main-banner {
+		background: url("../images/weddings-bg.jpg") no-repeat;
+	}
+}
+
 // DECORATION SERVICES
 
-.decorations-services {
-	margin: 0 0 127px;
+.page-decoration {
+	.main-banner {
+		background-image: url("../images/decoration-bg.jpg");
+	}
+	.decorations-services {
+		margin: 0 0 127px;
+	}
 }
 
 // CONTACTS SERVICES
@@ -247,6 +262,9 @@
 // GALLERY PAGE
 
 .page-gallery {
+	.main-banner {
+		background-image: url("../images/gallery-bg.jpg");
+	}
 	.gallery-main {
 		position: relative;
 		top: -70px;

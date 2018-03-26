@@ -448,6 +448,16 @@
 				padding-bottom: 0;
 				background: none;
 			}
+			&--center {
+				.description {
+					display: block;
+					width: calc(100% - 40px);
+					padding: 10px;
+				}
+				&:after {
+					background-color: rgba(142, 201, 207, .8);
+				}
+			}
 		}
 	}
 	
