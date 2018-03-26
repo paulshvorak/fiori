@@ -57,6 +57,18 @@
 			}
 		}
 	}
+	@media screen and (max-width: $screen-md-max) {
+		&-banner {
+			padding: 148px 0 146px;
+			&__logo {
+				margin: 0 auto 50px;
+				max-width: 250px;
+			}
+			&__title {
+				margin: 0 0 150px;
+			}
+		}
+	}
 	@media screen and (max-width: $screen-sm-max) {
 		&-banner {
 			&__title {
@@ -144,9 +156,9 @@
 			margin: 0;
 		}
 		@media screen and (max-width: $screen-xs-max) {
-			padding: 126px 0 40px;
+			padding: 76px 0 40px;
 			.container {
-				min-height: calc(100vh - 166px);
+				min-height: calc(100vh - 116px);
 			}
 			&__logo {
 				margin: 0;
@@ -197,6 +209,26 @@
 			&__nav {
 				&-item {
 					padding: 6px 12px;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		.header {
+			&__inner {
+				@include flex-direction(row);
+			}
+			&__lang {
+				margin: 0;
+			}
+			&__nav {
+				&-item {
+					a {
+						vertical-align: sub;
+					}
+					&:not(:last-child) {
+						margin-right: 20px;
+					}
 				}
 			}
 		}
