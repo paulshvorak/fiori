@@ -419,12 +419,7 @@
 			a {
 				font-size: 20px;
 				line-height: 1;
-				color: $primary;
 				text-transform: uppercase;
-				text-decoration: underline;
-				&:hover {
-					color: darken($primary, 10%);
-				}
 			}
 		}
 	}
