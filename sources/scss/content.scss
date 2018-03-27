@@ -286,6 +286,9 @@
 			margin-bottom: 8px;
 		}
 	}
+	&__site {
+		font-size: 18px;
+	}
 	&__socials {
 		@include flexbox();
 		@include justify-content(center);
