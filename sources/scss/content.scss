@@ -10,11 +10,11 @@
 		padding: 172px 0 146px;
 		&__logo {
 			display: block;
-			margin: 0 auto 76px;
+			margin: 0 auto 64px;
 			max-width: 100%;
 		}
 		&__title {
-			margin: 0 0 300px;
+			margin: 0 0 216px;
 			text-align: center;
 			color: $white;
 			line-height: 1;
@@ -427,3 +427,18 @@
 	}
 }
 
+//
+
+.page {
+	&-contacts,
+	&-flowers,
+	&-decor,
+	&-gallery {
+		.main-banner__logo {
+			margin: 0 auto 36px;
+		}
+		.main-banner__title {
+			margin: 0 0 164px;
+		}
+	}
+}

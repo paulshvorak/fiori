@@ -1,3 +1,11 @@
+a {
+	font-size: inherit;
+	font-family: DinProLight, sans-serif;
+	text-decoration: none;
+	color: inherit;
+	transition: color ease .15s;
+}
+
 .link {
 	position: relative;
 	font-size: inherit;
@@ -6,6 +14,12 @@
 	color: inherit;
 	letter-spacing: inherit;
 	transition: color ease .15s;
+	&--default {
+		color: $primary;
+		&:hover {
+			color: darken($primary, 10%);
+		}
+	}
 	&--white {
 		color: $white;
 		&:hover {
@@ -49,6 +63,9 @@
 				background-color: $white;
 			}
 		}
+	}
+	&--underline-default {
+		text-decoration: underline;
 	}
 }
 
