@@ -62,7 +62,7 @@
 			padding: 148px 0 146px;
 			&__logo {
 				margin: 0 auto 50px;
-				max-width: 250px;
+				max-width: 200px;
 			}
 			&__title {
 				margin: 0 0 150px;
@@ -71,8 +71,11 @@
 	}
 	@media screen and (max-width: $screen-sm-max) {
 		&-banner {
+			&__logo {
+				max-width: 200px;
+			}
 			&__title {
-				margin: 0 0 220px;
+				margin: 0 0 180px;
 			}
 		}
 	}
@@ -437,6 +440,45 @@
 		}
 		.main-banner__title {
 			margin: 0 0 164px;
+		}
+	}
+	@media screen and (max-width: $screen-md-max) {
+		&-contacts,
+		&-flowers,
+		&-decor,
+		&-gallery {
+			.main-banner__logo {
+				margin: 0 auto 36px;
+			}
+			.main-banner__title {
+				margin: 0 0 140px;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) {
+		&-contacts,
+		&-flowers,
+		&-decor,
+		&-gallery {
+			.main-banner__logo {
+				margin: 0 auto 24px;
+			}
+			.main-banner__title {
+				margin: 0 0 80px;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		&-contacts,
+		&-flowers,
+		&-decor,
+		&-gallery {
+			.main-banner__logo {
+				margin: 0 auto 16px;
+			}
+			.main-banner__title {
+				margin: 0 0 40px;
+			}
 		}
 	}
 }
