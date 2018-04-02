@@ -22,7 +22,6 @@
 	<meta name="theme-color" content="#ffffff">
 	<title>Decoration</title>
 	<link rel="stylesheet" href="app/css/bundle.min.css">
-	<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
 </head>
 <body>
 
@@ -32,17 +31,16 @@
 		<div class="container">
 			<div class="header__inner">
 				<div class="header__lang">
-					<!-- <select name="" class="header__lang-select">
+					<select name="" class="header__lang-select">
 						<option class="header__lang-select-item" value="eng" selected>eng</option>
 						<option class="header__lang-select-item" value="ru">ru</option>
-					</select> -->
+					</select>
 					<div class="header__lang-current">eng</div>
 					<div class="header__lang-list">
 						<div class="header__lang-list-item"><a href="#" class="link link--white">ua</a></div>
 						<div class="header__lang-list-item"><a href="#" class="link link--white">kz</a></div>
 						<div class="header__lang-list-item"><a href="#" class="link link--white">au</a></div>
 					</div>
-				</div>
 				</div>
 				<ul class="header__nav">
 					<li class="header__nav-item">
@@ -179,19 +177,6 @@
 	</footer>
 
 </div>
-
-<script type="text/javascript">
-	
-	var infScroll = new InfiniteScroll( '.decoration-services__list', {
-	  path: '.pagination__next',
-	  append: '.gallery__item',
-	  button: '.view-more-button',
-	  // using button, disable loading on scroll 
-	  scrollThreshold: false,
-	  status: '.page-load-status',
-	});
-
-</script>
 
 </body>
 
