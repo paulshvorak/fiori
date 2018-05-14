@@ -30,18 +30,10 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__inner">
-				<div class="header__lang">
-					<select name="" class="header__lang-select">
-						<option class="header__lang-select-item" value="eng" selected>eng</option>
-						<option class="header__lang-select-item" value="ru">ru</option>
-					</select>
-					<div class="header__lang-current">eng</div>
-					<div class="header__lang-list">
-						<div class="header__lang-list-item"><a href="#" class="link link--white">ua</a></div>
-						<div class="header__lang-list-item"><a href="#" class="link link--white">kz</a></div>
-						<div class="header__lang-list-item"><a href="#" class="link link--white">au</a></div>
-					</div>
-				</div>
+				<a href="index.html" class="header__logo">
+					<img src="app/images/logo-sm.svg" alt="logo" class="header__logo-pic">
+					<img src="app/images/logo-sm--gray.svg" alt="logo" class="header__logo-pic header__logo-pic--gray">
+				</a>
 				<ul class="header__nav">
 					<li class="header__nav-item">
 						<a href="./index.html" class="link link--white link--underline">Home</a>
@@ -52,7 +44,24 @@
 					<li class="header__nav-item">
 						<a href="./about.html" class="link link--white link--underline link--underline-active">About us</a>
 					</li>
+					<li class="header__nav-item header__lang">
+						<select name="" class="header__lang-select">
+							<option class="header__lang-select-item" value="eng" selected>eng</option>
+							<option class="header__lang-select-item" value="ru">ru</option>
+						</select>
+						<div class="header__lang-current">eng</div>
+						<div class="header__lang-list">
+							<div class="header__lang-list-item"><a href="#" class="link link--white">ua</a></div>
+							<div class="header__lang-list-item"><a href="#" class="link link--white">kz</a></div>
+							<div class="header__lang-list-item"><a href="#" class="link link--white">au</a></div>
+						</div>
+					</li>
 				</ul>
+				<div class="header__menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -61,11 +70,13 @@
 
 		<section class="main-banner">
 			<div class="container">
-				<img src="app/images/logo.svg" alt="logo" class="main-banner__logo">
 				<div class="main-banner__title">
 					<h1 class="title">We work worldwide</h1>
 				</div>
-				<div class="main-banner__nav">
+				<div class="main-banner__scroll">
+					<a data-scroll href="#scroll" class="scroll"></a>
+				</div>
+				<div id="scroll" class="main-banner__nav">
 					<div class="main-banner__nav-item">
 						<a href="./weddings.html" class="link link--white link--underline">Weddings</a>
 					</div>
@@ -85,7 +96,7 @@
 			</div>
 		</section>
 
-		<div class="container">
+		<div class="second-section container">
 			<div class="content">
 				<div class="page-headings">
 					<div class="page-headings__item page-headings__item--lg">
@@ -105,6 +116,12 @@
 	</footer>
 
 </div>
+
+<script src="app/js/smoothscroll.js"></script>
+
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 
 </body>
 

@@ -7,25 +7,49 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
-		padding: 172px 0 146px;
+		padding: 318px 0 146px;
 		&__logo {
 			display: block;
 			margin: 0 auto 64px;
 			max-width: 100%;
 		}
 		&__title {
-			margin: 0 0 216px;
+			margin: 0 0 239px;
 			text-align: center;
 			color: $white;
 			line-height: 1;
 			.title {
 				font-size: 90px;
-				letter-spacing: -3px;
+				//letter-spacing: -3px;
 			}
 			.subtitle {
 				margin: 20px 0 0;
 				font-size: 60px;
-				letter-spacing: -2px;
+				//letter-spacing: -2px;
+			}
+		}
+		&__scroll {
+			margin: 0 0 90px;
+			text-align: center;
+			.scroll {
+				display: inline-block;
+				width: 20px;
+				height: 40px;
+				background-image: url("../images/scroll.png");
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				animation: scaling 1s infinite;
+				@keyframes scaling {
+					0% {
+						transform: scale(1);
+					}
+					50% {
+						transform: scale(1.15);
+					}
+					100% {
+						transform: scale(1);
+					}
+				}
 			}
 		}
 		&__slider {
@@ -35,12 +59,12 @@
 			.item {
 				&-title {
 					font-size: 90px;
-					letter-spacing: 1.6px;
+					//letter-spacing: 1.6px;
 				}
 				&-subtitle {
 					margin: 20px 0 0;
 					font-size: 60px;
-					letter-spacing: .9px;
+					//letter-spacing: .9px;
 				}
 			}
 		}
@@ -112,6 +136,9 @@
 					}
 				}
 			}
+			&__scroll {
+				margin: 0 0 24px;
+			}
 		}
 	}
 	@media screen and (max-width: $screen-xs-max) and (orientation: landscape) {
@@ -124,6 +151,12 @@
 // MAIN PAGE
 
 .page-main {
+	.header {
+		padding: 60px 0;
+		&__inner {
+			@include justify-content(flex-end);
+		}
+	}
 	.main-banner {
 		background-image: url("../images/index-bg.jpg");
 		padding: 150px 0 60px;
@@ -227,6 +260,7 @@
 	}
 	@media screen and (max-width: $screen-xs-max) {
 		.header {
+			padding: 48px 0;
 			&__inner {
 				@include flex-direction(row);
 			}
@@ -238,9 +272,9 @@
 					a {
 						vertical-align: sub;
 					}
-					&:not(:last-child) {
-						margin-right: 20px;
-					}
+					//&:not(:last-child) {
+					//	margin-right: 20px;
+					//}
 				}
 			}
 		}
@@ -279,7 +313,7 @@
 	}
 }
 
-// CONTACTS SERVICES
+// CONTACTS
 
 .contacts {
 	text-align: center;

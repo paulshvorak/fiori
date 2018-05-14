@@ -1,6 +1,6 @@
 a {
 	font-size: inherit;
-	font-family: DinProLight, sans-serif;
+	font-family: 'PF Din Text Comp Pro', sans-serif;
 	text-decoration: none;
 	color: inherit;
 	transition: color ease .15s;
@@ -9,10 +9,10 @@ a {
 .link {
 	position: relative;
 	font-size: inherit;
-	font-family: DinProLight, sans-serif;
+	font-family: 'PF Din Text Comp Pro', sans-serif;
 	text-decoration: none;
 	color: inherit;
-	letter-spacing: inherit;
+	//letter-spacing: inherit;
 	transition: color ease .15s;
 	&--default {
 		color: $primary;
@@ -80,6 +80,20 @@ a {
 
 .main {
 	@include flex(1);
+}
+
+.menu-is-open {
+	overflow: hidden;
+	.header--visible {
+		.header__nav-item .link {
+			color: $white;
+		}
+		.header__menu {
+			span {
+				background: $white;
+			}
+		}
+	}
 }
 
 [placeholder] {
@@ -190,7 +204,7 @@ a {
 	padding: 0 0 16px;
 	font-size: 34px;
 	line-height: 1;
-	letter-spacing: -2px;
+	//letter-spacing: -2px;
 	text-align: center;
 	text-transform: uppercase;
 	color: $primary;
@@ -362,7 +376,7 @@ a {
 						font-size: 20px;
 						line-height: 1;
 						text-decoration: underline;
-						letter-spacing: .55px;
+						//letter-spacing: .55px;
 						color: $white;
 						&:hover {
 							color: darken($white, 10%);

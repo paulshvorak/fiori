@@ -1,22 +1,19 @@
 // Fonts
 
 @font-face {
-	font-family: "DinProLight";
-	src: url("../fonts/dinpro-light.otf");
-	font-style: normal;
+	font-family: 'PF Din Text Comp Pro';
+	src: url('../fonts/PFDinTextCompPro-Regular.eot');
+	src: url('../fonts/PFDinTextCompPro-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/PFDinTextCompPro-Regular.woff2') format('woff2'),
+	url('../fonts/PFDinTextCompPro-Regular.woff') format('woff'),
+	url('../fonts/PFDinTextCompPro-Regular.ttf') format('truetype');
 	font-weight: normal;
-}
-
-@font-face {
-	font-family: "DinProRegular";
-	src: url("../fonts/dinpro-regular.ttf");
 	font-style: normal;
-	font-weight: normal;
 }
 
 * {
 	
-	font-family: DinProLight, sans-serif;
+	font-family: 'PF Din Text Comp Pro', sans-serif;
 	
 }
 
