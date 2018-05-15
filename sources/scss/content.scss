@@ -71,9 +71,29 @@
 		&__nav {
 			@include flexbox();
 			@include justify-content(space-between);
+			@include align-items(center);
 			&-item {
 				font-size: 24px;
 				line-height: 1;
+				&.header__lang {
+					margin-top: 0;
+					&:after {
+						margin-top: -2px;
+						border-width: 0 3px 4px 3px;
+						border-color: transparent transparent $white transparent;
+					}
+					.header__lang {
+						&-select,
+						&-current,
+						&-list-item {
+							text-transform: none;
+						}
+						&-list {
+							top: auto;
+							bottom: 100%;
+						}
+					}
+				}
 			}
 			&--clipped {
 				max-width: 1300px;
