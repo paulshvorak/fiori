@@ -131,11 +131,14 @@
 
 
 	var header = document.querySelector('.header');
-	var secondSection = document.querySelector('.second-section');
-	var secondSectionTop = secondSection.offsetTop;
+	var firstSection = document.querySelector('.main-banner');
+	// var secondSection = document.querySelector('.second-section');
+	// var secondSectionTop = secondSection.offsetTop;
+	var firstSectionHeight = firstSection.offsetHeight;
 
 	window.onscroll = function () {
-		if (window.scrollY > secondSectionTop) {
+		console.log(firstSectionHeight);
+		if (window.scrollY > firstSectionHeight / 2) {
 			header.classList.add('header--visible');
 		} else {
 			header.classList.remove('header--visible');
