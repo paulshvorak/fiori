@@ -137,7 +137,6 @@
 	var firstSectionHeight = firstSection.offsetHeight;
 
 	window.onscroll = function () {
-		console.log(firstSectionHeight);
 		if (window.scrollY > firstSectionHeight / 2) {
 			header.classList.add('header--visible');
 		} else {
